@@ -1,0 +1,267 @@
+/*-------------------------------------------------------------
+1. Mixin
+--------------------------------------------------------------*/
+:root {
+  --oedw-primary-color: #172a68;
+  --oedw-secondary-color: #f25a87;
+  --oedw-border-color: #cccccc;
+  --oedw-shadow-color: #36b97e;
+}
+
+.oedw_hidden {
+  display: none !important;
+}
+
+.oedw-flex {
+  display: flex;
+}
+
+.oedw_flex_row_reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.oedw_flex_align_items_center {
+  align-items: center;
+}
+
+.oedw_flex_align_items_start {
+  align-items: flex-start;
+}
+
+.oedw_flex_align_items_end {
+  align-items: flex-end;
+}
+
+.oedw_flex_justify_content_center {
+  justify-content: center;
+}
+
+.oedw_flex_justify_content_start {
+  justify-content: flex-start;
+}
+
+.oedw_flex_justify_content_end {
+  justify-content: flex-end;
+}
+
+.mt {
+  margin-top: 30px;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.oedw_hidden_line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.oedw_toggle {
+  cursor: pointer;
+  display: inline-flex;
+  margin: 5px 0;
+  align-items: center;
+}
+.oedw_toggle .oedw_toggle_input {
+  position: absolute;
+  visibility: hidden;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.oedw_toggle .oedw_toggle_input:checked + .oedw_toggle_switch {
+  background: var(--oedw-primary-color);
+}
+.oedw_toggle .oedw_toggle_input:checked + .oedw_toggle_switch::before {
+  left: 23px;
+}
+.oedw_toggle .oedw_toggle_switch {
+  display: inline-block;
+  background: rgba(10, 9, 89, 0.08);
+  border-radius: 16px;
+  width: 46px;
+  height: 26px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  margin-right: 15px;
+}
+.oedw_toggle .oedw_toggle_switch::before {
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  transition: all 0.25s ease;
+  content: "";
+}
+
+/*-------------------------------------------------------------
+2. Single Settings Tab
+--------------------------------------------------------------*/
+/*-------------------------------------------------------------
+3. Settings Page
+--------------------------------------------------------------*/
+.oedw_field_nolabel label {
+  display: none !important;
+}
+
+.oedw_wrap_settings {
+  display: flex;
+  margin-top: 30px;
+}
+.oedw_wrap_settings .oedw_g_set_tabcontents {
+  flex: 0 0 60%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.oedw_wrap_settings .oedw_g_set_tabs {
+  flex: 0 0 300px;
+  margin: 0;
+}
+.oedw_wrap_settings .oedw_g_set_tabs li {
+  margin-bottom: 15px;
+  padding-right: 30px;
+}
+.oedw_wrap_settings .oedw_g_set_tabs li a {
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 15px;
+  color: #464646;
+  display: inline-flex;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  outline: unset !important;
+  box-shadow: unset;
+}
+.oedw_wrap_settings .oedw_g_set_tabs li a img {
+  margin-right: 10px;
+}
+.oedw_wrap_settings .oedw_g_set_tabs li a.active, .oedw_wrap_settings .oedw_g_set_tabs li a:hover {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #f25a87;
+  background-color: #fff;
+}
+.oedw_wrap_settings .options_group:last-child {
+  margin-bottom: 0;
+}
+.oedw_wrap_settings .options_group:not(:last-child) {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2f0f0;
+}
+.oedw_wrap_settings .options_group h3 {
+  margin: 0 0 10px 0;
+}
+.oedw_wrap_settings .options_group h4 {
+  margin-bottom: 0;
+}
+.oedw_wrap_settings .oedw_child_settings .oedw_setting_form {
+  margin-right: 15px;
+  width: 100%;
+}
+.oedw_wrap_settings .oedw_setting_form:not(.oedw_flex_row_reverse) label {
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.oedw_wrap_settings .oedw_setting_form.remove_label_field label {
+  display: none;
+}
+.oedw_wrap_settings .oedw_rules_box {
+  padding: 20px;
+  border: 1px solid var(--oedw-border-color);
+  border-radius: 5px;
+  position: relative;
+}
+.oedw_wrap_settings .oedw_rules_box .option_item .oedw_group_settings_condition {
+  padding: 10px 20px;
+  border: 1px solid var(--oedw-border-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #f4f4f46b;
+}
+.oedw_wrap_settings .oedw_rules_box .rule_action_btn {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  display: flex;
+}
+.oedw_wrap_settings .oedw_rules_box .rule_action_btn .rpt_btn_remove {
+  background-color: #f02440;
+  color: #fff;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 5px 0 0;
+}
+.oedw_wrap_settings .repeater_btn a {
+  text-decoration: none;
+}
+.oedw_wrap_settings .repeater_btn a:hover {
+  opacity: 0.8;
+}
+
+.oedw_wrap_action_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.oedw_header_settings {
+  margin-bottom: 50px;
+}
+.oedw_header_settings .oedw_title_page {
+  font-weight: 500;
+  font-size: 30px;
+  color: #172a68;
+}
+.oedw_header_settings .oedw_subtitle_page {
+  margin: 10px 0 0 0;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+#oedw_import_export .options_group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+}
+#oedw_import_export .options_group .oedw_group_option {
+  display: flex;
+  align-items: flex-start;
+}
+#oedw_import_export .options_group .oedw_group_option img {
+  margin-right: 30px;
+}
+
+#oedw-import-form-settings .oedw_field_wrap {
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+}
+
+body.opal-product_page_oedw-settings {
+  background-color: #f5f7fa;
+}

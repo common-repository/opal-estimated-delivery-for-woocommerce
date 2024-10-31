@@ -1,0 +1,143 @@
+/*-------------------------------------------------------------
+1. Mixin
+--------------------------------------------------------------*/
+:root {
+  --oedw-primary-color: #172a68;
+  --oedw-secondary-color: #f25a87;
+  --oedw-border-color: #cccccc;
+  --oedw-shadow-color: #36b97e;
+}
+
+.oedw_hidden {
+  display: none !important;
+}
+
+.oedw-flex {
+  display: flex;
+}
+
+.oedw_flex_row_reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.oedw_flex_align_items_center {
+  align-items: center;
+}
+
+.oedw_flex_align_items_start {
+  align-items: flex-start;
+}
+
+.oedw_flex_align_items_end {
+  align-items: flex-end;
+}
+
+.oedw_flex_justify_content_center {
+  justify-content: center;
+}
+
+.oedw_flex_justify_content_start {
+  justify-content: flex-start;
+}
+
+.oedw_flex_justify_content_end {
+  justify-content: flex-end;
+}
+
+.mt {
+  margin-top: 30px;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.oedw_hidden_line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.oedw_toggle {
+  cursor: pointer;
+  display: inline-flex;
+  margin: 5px 0;
+  align-items: center;
+}
+.oedw_toggle .oedw_toggle_input {
+  position: absolute;
+  visibility: hidden;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.oedw_toggle .oedw_toggle_input:checked + .oedw_toggle_switch {
+  background: var(--oedw-primary-color);
+}
+.oedw_toggle .oedw_toggle_input:checked + .oedw_toggle_switch::before {
+  left: 23px;
+}
+.oedw_toggle .oedw_toggle_switch {
+  display: inline-block;
+  background: rgba(10, 9, 89, 0.08);
+  border-radius: 16px;
+  width: 46px;
+  height: 26px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  margin-right: 15px;
+}
+.oedw_toggle .oedw_toggle_switch::before {
+  display: block;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  transition: all 0.25s ease;
+  content: "";
+}
+
+/*-------------------------------------------------------------
+2. Frontend Render
+--------------------------------------------------------------*/
+.oedw-est-box {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+#oedw_detail_zone {
+  margin-left: 15px;
+  color: var(--oedw-primary-color);
+  text-decoration: underline;
+}
+
+.oedw-est-shipping-method {
+  padding: 15px 20px;
+  border: 1px dashed var(--owcpv-border-color);
+  margin: 0 0 30px;
+}
+.oedw-est-shipping-method .oedw-list-zones {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.oedw-est-shipping-method .oedw-list-zones .oedw-item-zone:not(:last-child) {
+  margin-bottom: 15px;
+}
+.oedw-est-shipping-method .oedw-zone-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.oedw-est-shipping-method .oedw-list-methods {
+  list-style: disc;
+  font-size: 14px;
+}

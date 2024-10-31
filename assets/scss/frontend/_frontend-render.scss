@@ -1,0 +1,31 @@
+.oedw-est-box {
+    margin-bottom: 15px;
+    display: flex;
+}
+#oedw_detail_zone {
+    margin-left: 15px;
+    color: var(--oedw-primary-color);
+    text-decoration: underline;
+}
+.oedw-est-shipping-method {
+    padding: 15px 20px;
+    border: 1px dashed var(--owcpv-border-color);
+    margin: 0 0 30px;
+    .oedw-list-zones {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .oedw-item-zone:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    .oedw-zone-name {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .oedw-list-methods {
+        list-style: disc;
+        font-size: 14px;
+    }
+}
